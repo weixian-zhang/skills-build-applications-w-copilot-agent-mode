@@ -10,39 +10,34 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="container">
-            <Link className="navbar-brand d-flex align-items-center" to="/">
+      <div className="App d-flex">
+        <nav className="sidebar bg-dark">
+          <div className="sidebar-header p-3">
+            <Link className="d-flex align-items-center text-white text-decoration-none" to="/">
               <img src={logo} alt="OctoFit" width="40" height="40" className="me-2" />
-              OctoFit Tracker
+              <span>OctoFit Tracker</span>
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">Home</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/activities">Activities</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/leaderboard">Leaderboard</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/teams">Teams</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/workouts">Workouts</Link>
-                </li>
-              </ul>
-            </div>
           </div>
+          <ul className="sidebar-nav list-unstyled p-3">
+            <li className="nav-item mb-2">
+              <Link className="nav-link text-white" to="/">Home</Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link className="nav-link text-white" to="/activities">Activities</Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link className="nav-link text-white" to="/leaderboard">Leaderboard</Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link className="nav-link text-white" to="/teams">Teams</Link>
+            </li>
+            <li className="nav-item mb-2">
+              <Link className="nav-link text-white" to="/workouts">Workouts</Link>
+            </li>
+          </ul>
         </nav>
 
-        <div className="container mt-4">
+        <div className="content flex-grow-1 p-4">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/activities" element={<Activities />} />
