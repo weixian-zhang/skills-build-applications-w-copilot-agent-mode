@@ -4,7 +4,7 @@ import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Workouts from './components/Workouts';
-import logo from './octofitapp-small.png';
+import logo from './assets/octofitapp-small.png';
 import './App.css';
 
 function App() {
